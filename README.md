@@ -15,4 +15,4 @@ On second select menu (on bottom) user can choose the unit measure that want to 
 ## Aviable Functionalities ✅
 At moment, the application support the following functionalities:
 
-- Temperature 🌡️ (Celsius, Farheneit and Kelvin)
+- Temperature 🌡️ (Celsius, Fahrenheit and Kelvin)
