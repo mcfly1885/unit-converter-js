@@ -1,0 +1,83 @@
+/*Reset-----------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+
+}
+/*IDs-----------------------------------*/
+#Xunit{
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+#x,
+#x:focus{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #999;
+    max-width: 150px;
+    margin-right: 20px;
+    text-align: center;
+}
+#y{
+    height: 80px;
+}
+/*tags----------------------------------*/
+body{
+    background-image: linear-gradient(to right, #000000, #5887ab);
+    color: white;
+}
+h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+select,
+input{
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid #888;
+    background: none;
+    color: white;
+    
+}
+::picker(select) {
+  border: none;
+  color: black;
+}
+/*Classes-------------------------------*/
+.box{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 50px;
+    text-align: center;
+    min-width: 500px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+.gap{
+    display: block;
+    height: 80px;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+}
+.result span{
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    max-width: 100%;
+}
+.setx,
+.settings{
+    height: 100px;
+    flex-direction: column;
+}
+
