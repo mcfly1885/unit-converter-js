@@ -1,11 +1,11 @@
 # Unit Converter
-A simple Vanilla JavaScript application that convert measure values.
+A simple JavaScript application that convert measure values.
 
 
 ## How it works ⚙️
 
 
-The application, written in VanillaJS requires user to insert a starting value in a number field, and an unit measure in select menu (on top).
+The application, written in Javascript requires user to insert a starting value in a number field, and an unit measure in select menu (on top).
 
 ![App-demo](img/UnitConverter-demo.webp)
 
