@@ -1,5 +1,5 @@
 # Unit Converter
-A simple JavaScript application that convert measure values.
+A simple JavaScript application that converts unit measures.
 
 
 ## How it works ⚙️
