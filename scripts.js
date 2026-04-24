@@ -1,3 +1,5 @@
+import * as temperature from "./modules/temperature.js";
+
 function getValue(id){
     return document.getElementById(id).value;
 }
@@ -8,44 +10,7 @@ function setText(id,text){
     document.getElementById(id).innerText=text;
 }
 
-//Temperature Functions
-//celsius------------------------
-function celsiusTokelvin(celsius){
-    celsius = parseFloat(celsius);
-    let result = Number.parseFloat(celsius + 273.15).toFixed(2);
-    return result;
-}
 
-function celsiusTofahrenheit(celsius){
-    celsius = parseFloat(celsius);
-    let result = Number.parseFloat(celsius*9/5+32).toFixed(2);
-    return result;
-}
-
-//kelvin-------------------------
-function kelvinTocelsius(kelvin){
-    kelvin = parseFloat(kelvin);
-    let result = Number.parseFloat(kelvin-273.15).toFixed(2);
-    return result;
-}
-
-function kelvinTofahrenheit(kelvin){
-    kelvin = parseFloat(kelvin);
-    let result = Number.parseFloat((kelvin-273.15)*9/5+32).toFixed(2);
-    return result;
-}
-//fahrenheit-----------------------------
-function fahrenheitTocelsius(fahrenheit){
-    fahrenheit = parseFloat(fahrenheit);
-    let result = Number.parseFloat((fahrenheit-32)*5/9).toFixed(2);
-    return result;
-}
-
-function fahrenheitTokelvin(fahrenheit){
-    fahrenheit = parseFloat(fahrenheit);
-     let result = Number.parseFloat(fahrenheit*5/9+255.37).toFixed(2);
-    return result;
-}
 //Convert-function
 function convert(id,target){
     const value = getValue(id);
@@ -56,22 +21,22 @@ function convert(id,target){
     const Yunit = getValue("Yunit");
     switch(true){
         case (Xunit == "celsius" && Yunit == "kelvin"):
-            setText(target,celsiusTokelvin(value)+"K");
+            setText(target,temperature.celsiusTokelvin(value)+"K");
             break;
         case (Xunit == "celsius" && Yunit == "fahrenheit"):
-            setText(target,celsiusTofahrenheit(value)+"°F");
+            setText(target,temperature.celsiusTofahrenheit(value)+"°F");
             break;//-------------------------------------------------------------
         case (Xunit == "fahrenheit" && Yunit == "celsius"):
-            setText(target,fahrenheitTocelsius(value)+"°C");
+            setText(target,temperature.fahrenheitTocelsius(value)+"°C");
             break;
         case (Xunit == "fahrenheit" && Yunit == "kelvin"):
-            setText(target,fahrenheitTokelvin(value)+"K");
+            setText(target,temperature.fahrenheitTokelvin(value)+"K");
             break;//-------------------------------------------------------------
         case (Xunit == "kelvin" && Yunit == "celsius"):
-            setText(target,kelvinTocelsius(value)+"°C");
+            setText(target,temperature.kelvinTocelsius(value)+"°C");
             break;
         case (Xunit == "kelvin" && Yunit == "fahrenheit"):
-            setText(target,kelvinTofahrenheit(value)+"°F"); 
+            setText(target,temperature.kelvinTofahrenheit(value)+"°F"); 
             break;//-------------------------------------------------------------
 
         case (Xunit == Yunit):
