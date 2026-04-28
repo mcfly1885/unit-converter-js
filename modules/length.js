@@ -1,16 +1,10 @@
-//SI-unit-functuion-------------------------------
-
-export function up(value, coefficient){
-    value = parseFloat(value);
-    let result = Number.parseFloat(value).toFixed(2)*coefficient;
-    return result;
-}
-//------------------------------------------------
 export function lengthConvert(x,y,value){
     let meter;
-    const MILEMETER = 1609.344;
-    const YARDMETER = 0.9144;
-    const FEETMETER = 0.3048;
+    const tometer = {
+        mile:  1609.344,
+        yard:  0.9144,
+        feet:  0.3048
+    };
 
     switch(true){
         case(x == "millimeter"):
@@ -35,13 +29,13 @@ export function lengthConvert(x,y,value){
             meter = value * 1000;
             break;
         case(x == "mile"):
-            meter = value * MILEMETER;
+            meter = value * tometer.mile;
             break;
         case(x == "yard"):
-            meter = value * YARDMETER;
+            meter = value * tometer.yard;
             break;
         case(x == "feet"):
-            meter = value * FEETMETER;
+            meter = value * tometer.feet;
             break;
         case(x == y):
             meter = value;
@@ -71,19 +65,19 @@ export function lengthConvert(x,y,value){
             result = meter / 1000;
             break;
         case (y == "mile"):
-            result = meter / MILEMETER;
+            result = meter / tometer.mile;
             break;
         case (y == "yard"):
-            result = meter / YARDMETER;
+            result = meter / tometer.yard;
             break;
         case (y == "feet"):
-            result = meter / FEETMETER;
+            result = meter / tometer.feet;
             break;
         case(x == y):
             meter = value;
             break;
     }
-    return result.toFixed(3);
+    return result.toPrecision(5);
 }
 
 

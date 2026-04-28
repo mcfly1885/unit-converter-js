@@ -5,14 +5,15 @@ A simple JavaScript application that converts the units of measurement.
 ## How it works ⚙️
 
 
-The application, written in Javascript requires user to insert a starting value in a number field, and an unit measure in select menu (on top).
+The application, written in Javascript requires user to choose a physic quantity in the top menu, a initial value in a number field, and an unit of measurement in drop-down menu.
 
 ![App-demo](img/UnitConverter-demo.webp)
 
 
-On second select menu (on bottom) user can choose the unit of measurement that want to convert to. The convertion occurs automatically when user interacts with select menus or enters / changes the value in the number field.
+On bottom drop-down menu user can choose the unit of measurement that want to convert to. The convertion occurs automatically when user interacts with drop-down menus or enters / changes the value in the number field.
 
 ## Aviable Functionalities ✅
-At moment, the application support the following functionalities:
+The application supports the following functionalities:
 
+- Length 📏 (SI Units, Mile, Yard and Feet)
 - Temperature 🌡️ (Celsius, Fahrenheit and Kelvin)
