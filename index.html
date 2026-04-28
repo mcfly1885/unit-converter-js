@@ -10,30 +10,23 @@
     <div id="container" class="container">
         <div class="box">
             <h2>Unit Converter</h2>
-
+              <select name="" id="unit" style="margin-bottom: 50px;">
+                    <option value="default" selected>Select a Unit</option>
+                    <option value="length">Length 📏</option>
+                    <option value="temperature">Temperature 🌡️</option>
+                </select>
             <div class="settings">
-                                <input type="number" name="" id="x"><span id="selected-unit">°C</span>
-
+                <input type="number" name="" id="x"><span id="selected-unit"></span>
                 <select name="" id="Xunit" class="my-select">
-                    <option value="celsius">Celsius</option>
-                    <option value="fahrenheit">Fahrenheit</option>
-                    <option value="kelvin">Kelvin</option>
                 </select>
             </div>
-
             <span class="gap"></span>
-
             <div class="result">
                 <span id="y"></span>
                  <select name="" id="Yunit" class="my-select">
-                    <option value="celsius">Celsius</option>
-                    <option value="fahrenheit">Fahrenheit</option>
-                    <option value="kelvin" selected>Kelvin</option>
                 </select>
             </div>
-
         </div>
-
     </div>
     
     <script type="module" src="temperature.js"></script>

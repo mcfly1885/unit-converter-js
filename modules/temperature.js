@@ -34,3 +34,12 @@ export function fahrenheitTokelvin(fahrenheit){
      let result = Number.parseFloat(fahrenheit*5/9+255.37).toFixed(2);
     return result;
 }
+
+
+export function temperatureList(list){
+    list.options.length = 0;
+    list.add(new Option ('Celsius','celsius'));
+    list.add(new Option ('Fahrenheit','fahrenheit'));
+    list.add(new Option ('Kelvin','kelvin'));
+
+}
