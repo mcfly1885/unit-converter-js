@@ -77,7 +77,7 @@ export function lengthConvert(x,y,value){
             meter = value;
             break;
     }
-    return result.toPrecision(5);
+    return Number.parseFloat(result.toPrecision(5));
 }
 
 
