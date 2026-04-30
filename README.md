@@ -16,4 +16,5 @@ On bottom drop-down menu user can choose the unit of measurement that want to co
 The application supports the following functionalities:
 
 - Length 📏 (SI Units, Mile, Yard and Feet)
+- Mass ⚖️ (SI Unit, Pound and Ounce)
 - Temperature 🌡️ (Celsius, Fahrenheit and Kelvin)
