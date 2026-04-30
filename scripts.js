@@ -1,5 +1,6 @@
 import * as temperature from "./modules/temperature.js";
 import * as length from "./modules/length.js";
+import * as mass from "./modules/mass.js";
 
 function getValue(id){
     return document.getElementById(id).value;
@@ -18,12 +19,16 @@ function convert(){
     const value = document.getElementById("x").value;
 
     switch(true){
-        case(unit=="temperature"):
-        setText("y",temperature.temperatureConvert(Xunit,Yunit,value));
-        break;
         case(unit=="length"):
         setText("y",length.lengthConvert(Xunit,Yunit,value));
         break;
+        case(unit=="mass"):
+        setText("y",mass.convert(Xunit,Yunit,value));
+        break;
+        case(unit=="temperature"):
+        setText("y",temperature.temperatureConvert(Xunit,Yunit,value));
+        break;
+
     } 
 }
 
@@ -38,6 +43,10 @@ document.getElementById('unit').addEventListener('change', ()=>{
         case (unit == "length"):
             length.lengthList(document.getElementById("Xunit"));
             length.lengthList(document.getElementById("Yunit"));
+            break;
+        case (unit == "mass"):
+            mass.massList(document.getElementById("Xunit"));
+            mass.massList(document.getElementById("Yunit"));
             break;
         case (unit == "temperature"):
             temperature.temperatureList(document.getElementById("Xunit"));
